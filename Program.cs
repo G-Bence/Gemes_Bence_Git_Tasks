@@ -59,6 +59,26 @@ namespace Class_241213
             return (average / array.Length);
         }
 
+
+        static int[] F04(int[] array) {
+            
+            int[] odds = new int[10]; //IndexOutOfRange Exception!
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] % 2 == 0)
+                {
+                    odds[i] = (array[i] + 1);
+                }
+                else
+                {
+                    odds[i] = array[i];
+                }
+            }
+
+            return odds;
+        }
+
         static void Main(string[] args)
         {
             //Test_1.2.3...
