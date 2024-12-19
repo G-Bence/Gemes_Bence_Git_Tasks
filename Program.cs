@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,15 +10,17 @@ namespace Class_241213
     internal class Program
     {
         /*
-            · Készíts egy „F02” nevű int típusú statikus metódust. A metódus várjon paraméterként egy egész számokból álló tömböt.
+            · Készíts egy „F03” nevű double típusú statikus metódust. A metódus várjon paraméterként egy egész számokból álló tömböt.
             
-            · Deklarálj egy egész szám típusú számláló változót.
+            · Deklarálj egy double típusú átlag változót.
             
-            · Készíts egy for ciklust, amely a paraméterként várt tömb hosszáig fut. A cikluson belül döntsd el, hogy az adott indexen lévő töm eleme páros szám vagy sem. Ha igen, akkor a számláló változóhoz adj hozzá 1-et.
+            · Készíts egy for ciklust, amely a paraméterként várt tömb hosszáig fut. A cikluson belül az átlag változóhoz add hozzá az aktuális index helyen lévő tömb elemét.
             
-            · A ciklus után return-öld a számláló változót.
+            · A ciklus után az átlag értékét módosítsd úgy, hogy az eredeti értéket elosztod a tömb hosszával.
             
-            · Készíts egy commit-ot „F02 feladat elkészítve” névvel, majd push-old is fel.
+            · Ezek után return-öld az átlagot az új értékével.
+            
+            · Készíts egy commit-ot „F03 feladat elkészítve” névvel, majd push-old is fel.
         */
 
         static void F01(int[] array)
@@ -42,6 +45,18 @@ namespace Class_241213
             }
 
             return counter;
+        }
+
+        static double F03(int[] array)
+        {
+            double average = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                average += array[i];
+            }
+
+            return (average / array.Length);
         }
 
         static void Main(string[] args)
