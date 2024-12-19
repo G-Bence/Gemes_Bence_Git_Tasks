@@ -79,7 +79,9 @@ namespace Class_241213
 
         static void Main(string[] args)
         {
-            //Test_1.2.3...
+            int[] numbers = new int[10];
+            F01(numbers);
+            F05(numbers);
         }
     }
 }
